@@ -1,11 +1,11 @@
 var skills = document.querySelectorAll("div.skill");
 var skills_data = {
-    'languages': [0, ['Java', 'Python', 'Rust', 'JavaScript', 'C']],
-    'libs': [0, ['Spring', 'Jenkins', 'TestNG', 'Aiogram', 'Tauri', 'Selenium']],
-    'ability': [0, ['SQL', 'HTML', 'CSS', 'GIT', 'Linux', 'Парсинг', 'Информационный поиск']],
-    'personal-achievements': [0, ['Школьник изобретатель']],
-    'personal-qualities': [0, ['Коммуникабельность', 'Обучаемость', 'Исполнительность', 'Настойчивость', 'Пунктуальность']],
-    'work-experience': [0, ['Фрилансер', 'Преподаватель академии ТОП']]
+    'languages': [0, ['Java', 'Python', 'Rust', 'JavaScript', 'C'], 0],
+    'libs': [0, ['Spring', 'Jenkins', 'TestNG', 'Aiogram', 'Tauri', 'Selenium'], 0],
+    'ability': [0, ['SQL', 'HTML', 'CSS', 'GIT', 'Linux', 'Парсинг', 'Информационный поиск'], 0],
+    'personal-achievements': [0, ['Школьник изобретатель'], 0],
+    'personal-qualities': [0, ['Коммуникабельность', 'Обучаемость', 'Исполнительность', 'Настойчивость', 'Пунктуальность'], 0],
+    'work-experience': [0, ['Фрилансер', 'Преподаватель академии ТОП'], 0]
 }
 skills.forEach(skill =>{
     index = skills_data[skill.id][0]
@@ -23,6 +23,8 @@ reload_imgs.forEach(reload_img =>{
             console.log('update index')
         }
         skill.style.color = '#191d19'
+        skills_data[reload_img.id][2]+=360
+        reload_img.style.transform = `rotate(-${skills_data[reload_img.id][2]}deg)`
         setTimeout(()=>{
             skill.textContent = skills_data[reload_img.id][1][++skills_data[reload_img.id][0]]
             skill.style.color = '#d1d2d1'

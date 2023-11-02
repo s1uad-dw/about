@@ -50,8 +50,7 @@ img.reload {
 img.reload:hover {
   cursor: pointer;
   opacity: 1;
-  animation:normal;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 div.skill {
