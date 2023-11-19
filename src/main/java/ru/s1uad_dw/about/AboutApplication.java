@@ -8,9 +8,7 @@ import ru.s1uad_dw.about.controllers.TestController;
 @SpringBootApplication
 @ComponentScan(basePackageClasses=TestController.class)
 public class AboutApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(AboutApplication.class, args);
 	}
-
 }
