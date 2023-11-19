@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class TestController {
     @GetMapping("/")
     public String abab(){
-        return "abab";
+        return "main";
     }
 }
